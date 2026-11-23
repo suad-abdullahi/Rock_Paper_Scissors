@@ -1,25 +1,36 @@
-# Rock Paper Scissors Game
 
-A fun Rock Paper Scissors game built using HTML, CSS, and JavaScript.
+# Rock Paper Scissors Game 🎮
+
+A fun and interactive Rock Paper Scissors game built using HTML, CSS, and JavaScript.
 
 ## Features
+
 - Player vs Computer
 - Random computer choices
 - Score tracking
-- Reset game button
-- Simple and clean design
+- Start Game button
+- Restart Game button
+- Win and Lose messages
+- First player to reach 5 points wins
+- Responsive design for desktop and mobile
+- Retro Arcade theme
 
 ## Technologies Used
-- HTML
-- CSS
+
+- HTML5
+- CSS3
 - JavaScript
 
 ## How to Play
+
 1. Open the game in your browser.
-2. Choose Rock, Paper, or Scissors.
-3. The computer will randomly choose its move.
-4. The winner gets one point.
-5. Click Reset to start again.
+2. Click Start Game.
+3. Choose Rock, Paper, or Scissors.
+4. The computer will randomly choose its move.
+5. The winner of each round gets one point.
+6. The first player to reach 5 points wins.
+7. Click Restart to play again.
 
 ## Author
+
 Suad Abdullahi

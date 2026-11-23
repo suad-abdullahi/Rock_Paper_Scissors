@@ -10,40 +10,59 @@
 
 <body>
 
-    <div class="game">
-        <h1>🪨 Rock Paper Scissors ✂️</h1>
-        <p class="subtitle">Play against the Computer!</p>
+    <main class="game">
+        <div class="game-header">
+            <p class="tag">ARCADE CHALLENGE</p>
+            <h1>ROCK PAPER SCISSORS</h1>
+            <p class="subtitle">Challenge the Computer!</p>
+        </div>
 
         <div class="score-board">
-            <div>
-                <h3>You</h3>
+            <div class="score-box">
+                <h3>👤 YOU</h3>
                 <p id="playerScore">0</p>
             </div>
 
-            <div>
-                <h3>Computer</h3>
+            <div class="vs">VS</div>
+
+            <div class="score-box">
+                <h3>🤖 COMPUTER</h3>
                 <p id="computerScore">0</p>
             </div>
         </div>
 
+        <p class="target">FIRST TO 5 POINTS WINS!</p>
+
         <h2>Choose Your Move</h2>
 
         <div class="choices">
-            <button onclick="playGame('Rock')">🪨 Rock</button>
-            <button onclick="playGame('Paper')">📄 Paper</button>
-            <button onclick="playGame('Scissors')">✂️ Scissors</button>
+            <button class="choice-btn" data-choice="Rock" disabled>
+                🪨 <span>Rock</span>
+            </button>
+
+            <button class="choice-btn" data-choice="Paper" disabled>
+                📄 <span>Paper</span>
+            </button>
+
+            <button class="choice-btn" data-choice="Scissors" disabled>
+                ✂️ <span>Scissors</span>
+            </button>
         </div>
 
         <div class="result">
             <p id="playerChoice">Your choice: -</p>
             <p id="computerChoice">Computer choice: -</p>
-            <h2 id="result">Let's Play!</h2>
+            <h2 id="result">Press Start to Play!</h2>
         </div>
 
-        <button class="reset" onclick="resetGame()">
-            🔄 Reset Game
-        </button>
-    </div>
+        <div class="game-buttons">
+            <button id="startBtn" class="start-btn">▶ START GAME</button>
+            <button id="restartBtn" class="restart-btn">↻ RESTART</button>
+        </div>
+
+        <p class="footer">GOOD LUCK & HAVE FUN! 🎮</p>
+
+    </main>
 
     <script src="script.js"></script>
 </body>

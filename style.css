@@ -6,99 +6,209 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #141e30, #243b55);
+    background: linear-gradient(135deg, #080b20, #151a3d);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 25px 15px;
     color: white;
 }
 
 .game {
-    background: white;
-    color: #222;
-    width: 90%;
-    max-width: 500px;
-    padding: 35px;
-    border-radius: 20px;
+    background: #11162e;
+    width: 100%;
+    max-width: 600px;
+    padding: 35px 25px;
+    border: 2px solid #343d72;
+    border-radius: 22px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 30px rgba(0, 225, 255, 0.12);
+}
+
+.game-header {
+    margin-bottom: 25px;
+}
+
+.tag {
+    color: #00e5ff;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 12px;
 }
 
 h1 {
-    color: #243b55;
+    color: #00e5ff;
+    font-size: 27px;
     margin-bottom: 10px;
+    text-shadow: 0 0 12px rgba(0, 229, 255, 0.4);
 }
 
 .subtitle {
-    color: gray;
-    margin-bottom: 25px;
+    color: #aab2d5;
 }
 
 .score-board {
     display: flex;
     justify-content: space-around;
-    background: #eef2f7;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 25px;
+    align-items: center;
+    background: #1b2245;
+    padding: 22px 10px;
+    border-radius: 15px;
+    margin-bottom: 18px;
 }
 
-.score-board p {
-    font-size: 35px;
+.score-box h3 {
+    font-size: 14px;
+    color: #c4cbea;
+}
+
+.score-box p {
+    font-size: 42px;
     font-weight: bold;
-    color: #243b55;
+    color: #00e5ff;
     margin-top: 10px;
+}
+
+.vs {
+    color: #ff4fd8;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.target {
+    color: #ffca55;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 20px 0;
+}
+
+.game h2 {
+    font-size: 19px;
+    margin: 15px 0;
 }
 
 .choices {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
     flex-wrap: wrap;
-    margin: 20px 0;
+    margin: 22px 0;
 }
 
-.choices button {
-    padding: 14px;
-    border: none;
-    border-radius: 10px;
-    background: #243b55;
+.choice-btn {
+    background: #252e5a;
     color: white;
-    font-size: 15px;
+    border: 2px solid #46538f;
+    padding: 18px 15px;
+    border-radius: 13px;
+    min-width: 115px;
+    font-size: 25px;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.choices button:hover {
-    background: #e67e22;
-    transform: translateY(-4px);
+.choice-btn span {
+    display: block;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.choice-btn:hover:not(:disabled) {
+    background: #00bcd4;
+    color: #080b20;
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #00e5ff;
+}
+
+.choice-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
 }
 
 .result {
-    background: #eef2f7;
-    padding: 20px;
-    border-radius: 12px;
+    background: #1b2245;
+    border-radius: 13px;
+    padding: 20px 10px;
     margin-top: 20px;
     line-height: 2;
+    min-height: 125px;
+    overflow-wrap: anywhere;
+}
+
+.result p {
+    color: #c4cbea;
+    font-size: 14px;
 }
 
 #result {
-    color: #e67e22;
+    color: #ffca55;
+    font-size: 19px;
     margin-top: 10px;
 }
 
-.reset {
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 15px;
+.game-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 22px;
+    flex-wrap: wrap;
 }
 
-.reset:hover {
-    background: #c0392b;
+.game-buttons button {
+    padding: 13px 22px;
+    border: none;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.start-btn {
+    background: #00d5c4;
+    color: #07131e;
+}
+
+.restart-btn {
+    background: #ff4fd8;
+    color: #160b20;
+}
+
+.game-buttons button:hover:not(:disabled) {
+    transform: scale(1.05);
+}
+
+.game-buttons button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.footer {
+    margin-top: 25px;
+    color: #818caf;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 480px) {
+    .game {
+        padding: 25px 15px;
+    }
+    h1 {
+        font-size: 21px;
+    }
+    .choice-btn {
+        min-width: 85px;
+        padding: 14px 10px;
+        font-size: 22px;
+    }
+    .score-box p {
+        font-size: 34px;
+    }
+    .game-buttons button {
+        width: 100%;
+    }
 }
